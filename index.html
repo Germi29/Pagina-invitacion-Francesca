@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV Años - Francesca</title>
+    <meta name="description" content="Invitación virtual a los XV años de Francesca.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (via CDN for simplicity) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0a192f',
+                            dark: '#020c1b',
+                            light: '#112240',
+                        },
+                        slate: {
+                            DEFAULT: '#8892b0',
+                            light: '#a8b2d1',
+                            lightest: '#ccd6f6',
+                        }
+                    },
+                    fontFamily: {
+                        script: ['"Great Vibes"', 'cursive'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Spotify Icon from FontAwesome (optional, using SVGs directly instead for performance and minimalism) -->
+</head>
+
+<body
+    class="bg-navy-dark text-slate-light font-serif antialiased overflow-x-hidden selection:bg-slate-lightest selection:text-navy-dark">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 hero-bg">
+        <div class="absolute inset-0 bg-navy-dark bg-opacity-40"></div> <!-- Overlay for contrast -->
+        <div class="relative z-10 fade-in-section">
+            <h2 class="text-slate-light text-lg tracking-widest uppercase mb-4">Estás invitado a mis</h2>
+            <h1 class="font-script text-7xl md:text-9xl text-slate-lightest mb-6 drop-shadow-lg">Francesca</h1>
+            <p class="text-xl md:text-2xl text-slate-light tracking-wide">Mis XV Años</p>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-slate-lightest" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
+                </path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Countdown Section -->
+    <section
+        class="py-20 px-4 bg-navy flex flex-col items-center justify-center text-center border-y border-navy-light relative overflow-hidden">
+        <div class="fade-in-section w-full max-w-4xl mx-auto z-10">
+            <h3 class="text-3xl text-slate-lightest mb-10 font-serif">Faltan</h3>
+
+            <div id="countdown" class="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-8">
+                <div class="flex flex-col items-center glass-panel p-3 md:p-6 rounded-2xl w-[4.5rem] sm:w-20 md:w-32">
+                    <span id="days" class="text-3xl md:text-5xl font-bold gray-metallic-text mb-1 md:mb-2">00</span>
+                    <span class="text-[9px] sm:text-[10px] md:text-xs uppercase tracking-widest text-slate">Días</span>
+                </div>
+                <div class="flex flex-col items-center glass-panel p-3 md:p-6 rounded-2xl w-[4.5rem] sm:w-20 md:w-32">
+                    <span id="hours" class="text-3xl md:text-5xl font-bold gray-metallic-text mb-1 md:mb-2">00</span>
+                    <span class="text-[9px] sm:text-[10px] md:text-xs uppercase tracking-widest text-slate">Horas</span>
+                </div>
+                <div class="flex flex-col items-center glass-panel p-3 md:p-6 rounded-2xl w-[4.5rem] sm:w-20 md:w-32">
+                    <span id="minutes" class="text-3xl md:text-5xl font-bold gray-metallic-text mb-1 md:mb-2">00</span>
+                    <span class="text-[9px] sm:text-[10px] md:text-xs uppercase tracking-widest text-slate">Mins</span>
+                </div>
+                <div class="flex flex-col items-center glass-panel p-3 md:p-6 rounded-2xl w-[4.5rem] sm:w-20 md:w-32">
+                    <span id="seconds" class="text-3xl md:text-5xl font-bold gray-metallic-text mb-1 md:mb-2">00</span>
+                    <span class="text-[9px] sm:text-[10px] md:text-xs uppercase tracking-widest text-slate">Segs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-24 px-4 bg-navy-dark">
+        <div class="max-w-5xl mx-auto fade-in-section">
+            <h3 class="font-script text-5xl md:text-6xl text-slate-lightest text-center mb-16">Momentos</h3>
+            <div
+                class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-10 md:gap-4 py-10 relative md:min-h-[500px]">
+                <!-- Using aesthetic Unsplash placeholders matching the vibe -->
+                <div class="cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-110 md:absolute md:left-[10%] md:top-[10%] group"
+                    style="transform: rotate(-6deg);"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1549471156-5287398ba35e?auto=format&fit=crop&q=80&w=1200')">
+                    <div class="w-64 h-80 bg-white p-3 shadow-2xl rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1549471156-5287398ba35e?auto=format&fit=crop&q=80&w=600"
+                            alt="Foto de Francesca 1"
+                            class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+                    </div>
+                </div>
+                <div class="cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-110 md:absolute md:left-[40%] md:top-[20%] group"
+                    style="transform: rotate(4deg);"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1515347619362-e676dd3726fb?auto=format&fit=crop&q=80&w=1200')">
+                    <div class="w-64 h-80 bg-white p-3 shadow-2xl rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1515347619362-e676dd3726fb?auto=format&fit=crop&q=80&w=600"
+                            alt="Foto de Francesca 2"
+                            class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+                    </div>
+                </div>
+                <div class="cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-110 md:absolute md:right-[15%] md:top-[5%] group"
+                    style="transform: rotate(-3deg);"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1533604141019-3316d2db17b5?auto=format&fit=crop&q=80&w=1200')">
+                    <div class="w-64 h-80 bg-white p-3 shadow-2xl rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1533604141019-3316d2db17b5?auto=format&fit=crop&q=80&w=600"
+                            alt="Foto de Francesca 3"
+                            class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dresscode & Info -->
+    <section class="py-24 px-4 bg-navy text-center">
+        <div class="max-w-3xl mx-auto fade-in-section glass-panel p-10 rounded-3xl relative overflow-hidden">
+            <!-- Decorative circle -->
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-navy-light rounded-full blur-3xl opacity-50"></div>
+
+            <div class="relative z-10 flex flex-col items-center">
+                <!-- Sparkle / Bowtie Icon -->
+                <svg class="w-16 h-16 text-slate-lightest mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                    </path>
+                </svg>
+
+                <h3 class="font-script text-5xl text-slate-lightest mb-4">Dresscode</h3>
+                <p class="text-2xl font-semibold text-slate-light tracking-wide uppercase">Formal Elegante</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regalo / Transferencia -->
+    <section class="py-24 px-4 bg-navy-dark text-center">
+        <div class="max-w-md mx-auto fade-in-section">
+            <h3 class="font-script text-5xl text-slate-lightest mb-8">Regalos</h3>
+            <p class="text-slate mb-8 px-4">El mejor regalo es tu presencia en este día tan especial. Pero si deseas
+                hacerme un obsequio, puedes hacerlo a través de Mercado Pago.</p>
+
+            <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-navy-light to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div class="relative z-10">
+                    <svg class="w-12 h-12 text-slate-lightest mx-auto mb-4" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                    </svg>
+                    <p class="text-sm uppercase tracking-widest text-slate mb-2">Alias de Mercado Pago</p>
+                    <p class="text-2xl font-semibold text-slate-lightest mb-6">francesca.xv.mp</p>
+
+                    <button id="copyBtn"
+                        class="px-6 py-2 border border-slate-light text-slate-light hover:bg-slate-light hover:text-navy-dark rounded-full transition-colors duration-300 text-sm tracking-widest uppercase">
+                        Copiar Alias
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="py-24 px-4 bg-navy border-y border-navy-light">
+        <div class="max-w-2xl mx-auto fade-in-section text-center">
+            <h3 class="font-script text-5xl text-slate-lightest mb-6">Música</h3>
+            <p class="text-slate mb-10">¡Ayúdame a armar la mejor playlist para la fiesta! Escucha lo que ya tenemos o
+                añade tus favoritas.</p>
+
+            <div class="glass-panel p-2 rounded-3xl">
+                <!-- Spotify embed placeholder (replace URL with actual playlist) -->
+                <iframe style="border-radius:24px"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbbu94YBG7Ye?utm_source=generator&theme=0"
+                    width="100%" height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="py-24 px-4 bg-navy-dark relative">
+        <div class="max-w-2xl mx-auto fade-in-section">
+            <h3 class="font-script text-5xl md:text-6xl text-slate-lightest text-center mb-10">Confirma tu Asistencia
+            </h3>
+
+            <div class="glass-panel p-10 md:p-14 rounded-3xl text-center flex flex-col items-center">
+                <svg class="w-16 h-16 text-slate-lightest mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76">
+                    </path>
+                </svg>
+                <p class="text-lg text-slate mb-8 max-w-md">Para organizar todo de la mejor manera, por favor confirma
+                    tu asistencia completando el siguiente formulario.</p>
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                    class="inline-block bg-slate-lightest text-navy-dark font-script font-semibold text-3xl px-10 py-4 rounded-full hover:bg-white hover:scale-105 hover:shadow-[0_0_25px_rgba(204,214,246,0.4)] transition-all duration-300">
+                    Completar Formulario
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy border-t border-navy-light py-8 text-center px-4">
+        <p class="text-slate text-sm">¡Te espero para celebrar juntos!</p>
+        <p class="font-script text-2xl text-slate-light mt-2">Francesca</p>
+    </footer>
+
+    <!-- Location Section -->
+    <section class="py-24 px-4 bg-navy border-t border-navy-light">
+        <div class="max-w-4xl mx-auto fade-in-section text-center">
+            <h3 class="font-script text-5xl md:text-6xl text-slate-lightest mb-6">Ubicación</h3>
+            <p class="text-slate mb-10">Te espero en el Salón Moments, Av. Deán Funes 998.</p>
+
+            <div class="glass-panel p-2 rounded-3xl overflow-hidden shadow-2xl relative h-[400px]">
+                <!-- Google Maps iframe with Night Mode CSS Filter applied -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6705.782934355205!2d-68.37106786656793!3d-34.612517981569454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9679083e6bd3b935%3A0xdf41eba24c9dfafa!2sMoment&#39;s%20empresa%20gastron%C3%B3mica%20(Centro%20de%20San%20Rafael)!5e1!3m2!1ses!2sar!4v1777171693869!5m2!1ses!2sar"
+                    class="w-full h-full rounded-2xl filter grayscale invert-[.9] hue-rotate-180 contrast-75 opacity-90 transition-all hover:opacity-100 hover:filter-none duration-1000"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <a href="https://maps.app.goo.gl/7d1oGVchmvXvovj48" target="_blank"
+                class="inline-block mt-8 px-8 py-3 border border-slate-light text-slate-lightest hover:bg-slate-lightest hover:text-navy-dark rounded-full transition-colors tracking-widest text-sm uppercase">
+                Abrir en Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox"
+        class="fixed inset-0 bg-navy-dark bg-opacity-95 backdrop-blur-md z-50 hidden flex items-center justify-center opacity-0 transition-opacity duration-300 p-4"
+        onclick="closeLightbox(event)">
+        <button onclick="closeLightbox(event)"
+            class="absolute top-8 right-8 text-slate-light hover:text-white transition-colors">
+            <svg class="w-10 h-10 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <img id="lightboxImg" src="" alt="Vista ampliada"
+            class="max-w-full max-h-[90vh] rounded-lg shadow-2xl transform scale-95 transition-transform duration-500">
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
